@@ -1,113 +1,89 @@
-# Lumberjack - Kit assembly guide
+## Lumberjack Kit - Guía de ensamble
 
-This assembly guide will guide you through putting together your Lumberjack keyboard PCB kit. The process is quite simple with only basic soldering experience.
+Esta guía de ensamble te ayudara a construir tu teclado Lumberjack. El proceso es relativamente sencillo y solo necesitaras un mínimo de experiencia soldando.
 
-## Before starting
 
-* Check you have all the required items not included in the kit.
-    * Soldering iron
-    * Solder
-    * Flush cutters
-    * 60 MX key switches
-* Check that you have all the components. See [BOM](BOM.md)
-    * Keep the resistors in the paper reel so that it is easy to tell them apart based upon how many there are.
-    * Do not confuse the 2 zener diodes with the 60 1N4148 diodes, they look almost identical but perform quite different functions.
-* If you are not used to soldering, learn how to solder components.
-    * https://learn.adafruit.com/adafruit-guide-excellent-soldering/tools
 
-## Soldering
+## Antes de empezar
 
-### Zener diodes (D61,62)
+* Se requieren las siguientes herramientas, que no se incluyen en el kit:
 
-Solder the Zener diodes D61 and D62 (D66 and D67 in older PCB revisions).
+    * Estaño para soldar (soldadura)
+    * Cautín
+    * Pinzas de corte
+    * 58 a 60 switches MX (Dependiendo del layout)
 
-Diodes are a polarized component and therefore take care of direction, the black line on the diode is the cathode and goes in the square pad on PCB.
+*  Revisa la lista de componentes en el [BOM](BOM.md).
+    * Los componentes tienen marcado su valor o nombre.
+    * Es importante no confundir los diodos zener (2 piezas) con los diodos 1N4148 (60 piezas), pues su función es diferente.
+    * Si no tienes experiencia previa soldando componentes, puedes revisar la siguiente guia: 
+        * https://learn.adafruit.com/adafruit-guide-excellent-soldering/tools
+    
+## Soldado de componentes
 
-Do not get these confused with the 1N4148 diodes.
+### Diodos Zener (D61,62)
 
-![Zener diodes](images/guide/zener.jpg)
+Solde los diodos Zener D61 y D62. Estos diodos son componentes con polarización específica (orientación), por lo tanto se debe tener cuidado con la dirección de los mismos. La línea negra en el diodo es el cátodo y debe soldarse en el pad cuadrado de la pcb.
 
-### Resistors (R1,2,3,4,7,8)
+![Diodos Zener](images/guide/zener.jpg)
 
-Solder the resistors.
+### Resistores (R1,2,3,4,7,8)
 
-Ensure you use the correct size resistor for the correct position. You can identify which resistors are which due to the number of resistors of each type in the kit or by matching the colored bands on the resistors.
+Solde los resistores.
 
-* R1,7,8: 1.5kΩ Brown, green, black, brown, red
-* R2,3: 75Ω Violet, green, black, gold, red
-* R4: 10kΩ Brown, black, black, red, red
+Asegurese de utilizar los resistores correctos en cada lugar. Puede identificar los resistores por la cantidad de los mismos, por su valor marcado en la etiqueta o bien por su valor identificando el código de colores en las bandas de los resistores:
 
-![Resistors](images/guide/resistors.jpg)
+* R1,7,8: 1.5kΩ Café, verde, negro, café, verde
+* R2,3: 75Ω Violeta, verde, negro, dorado, rojo
+* R4: 10kΩ Café,verde, negro, rojo, rojo
 
-### Resistors for USB-C (R5,6)
+![Resistores](images/guide/resistors.jpg)
 
-If you are using a UCB-C connector you will need to solder these extra two resistors. They are in the kit along with the connector.
+### Resistors en caso de upgradear al puerto USB-C (R5,6)
 
-* R5,6: 5.1kΩ Green, brown, black, brown, red
+Si decides instalar el conector USB-C, necesitas soldar estos 2 resistores extras (incluidos en el kit).
 
-![USB-C resistors](images/guide/resistors-usbc.jpg)
+* R5,6: 5.1kΩ Verde, café, negro, café, rojo
 
-### Diodes 1N4148 (D1-60)
+![Resistores USB-C](images/guide/resistors-usbc.jpg)
 
-Solder the diodes.
+### Diodos 1N4148 (D1-60)
 
-Diodes are a polarized component and therefore take care of direction, the black line on the diode is the cathode and goes in the square pad on PCB.
+Solde los diodos
 
-![1N4148 diodes](images/guide/diodes.jpg)
+Solde los diodos Zener D61 y D62. Estos diodos son componentes con polarización específica (orientación), por lo tanto se debe tener cuidado con la dirección de los mismos. La línea negra en el diodo es el cátodo y debe soldarse en el pad cuadrado de la pcb.
+
+![Diodos 1N4148](images/guide/diodes.jpg)
 
 ### Crystal (Y1)
 
-Solder the crystal.
+Solde el cristal de cuarzo.
+Este componente no tiene una polarización específica.
 
-![Crystal](images/guide/crystal.jpg)
+![Cristal](images/guide/crystal.jpg)
 
-### Capacitors (C1,2,4,5)
+### Capacitores (C1,2,4,5)
 
-Solder the small yellow 22pF capacitors C1 and C2 (marked 22, alternatively they may be small and brown in your kit).
+Solde los capacitores pequeños amarillos de 22 pF C1 y C2 (marcados como 22)
 
-Solder the small yellow 100nF capacitors C4 and C5 (marked 104).
+Solde los capacitores de 100 nF (marcados como 104)
 
-Do not get the two sets of capacitors confused.
+No confunda los valores de los capacitores
 
-![Capacitors](images/guide/capacitors.jpg)
+![Capacitores](images/guide/capacitors.jpg)
 
-Leave C3 until later as it is tall and will stop the PCB from laying flat.
+Dejaremos el capacitor electrolítico al final, pues por su altura puede incomodar el tranajar con la pcb boca-abajo.
 
 ### USB connector (J1)
 #### USB Mini
 
-Place the USB connector into the footprint on the underside of the PCB, it should stay put while you solder all of the pins (including the 2 feet).
+Coloque el conector USB dentro de la marca de la pcb en el lado inverso de la pcb (los pines deberan quedar hacia la parte superior). Por el tamaño del componente este se mantendrá fijo para que se solde.
 
-If not, solder one foot first, then reheat the pad while pressing the connector into place so that it sits flush on the PCB. Then solder the other foot and the pins.
+Se recomienda soldar primero una de las patillas del conector y posteriormente los pines, seguido de la otra patilla.
+
 
 ![USB](images/guide/usb.jpg)
 
-#### USB Type-C
-
-If you are installing a USB-C connector ensure you have installed the two extra resistors (R5 & R6).
-
-Due to the small size of the pins on the connector you will need to use a different soldering technique called drag soldering.
-
-* Insert the USB connector into the board, the pins are very small and might need bending slightly so that they align correctly.
-* Flip the board over and solder one of the legs into place.
-* Reheat the pad and press the USB port firmly into place to ensure it sits flat before then soldering the other 3 legs.
-* Apply no-clean flux across all of the small pins.
-* Apply a small amount of solder to your iron and drag it across the pins, repeat until all holes are filled with solder.
-* The flux will cause the solder to flow to the pins and avoid creating solder bridges between the pins.
-* Add more flux as needed as you go along.
-* Use your iron between the pads to remove any solder bridges.
-* Check the solder joints carefully, under a magnifying glass if needed, to ensure there are no bridges between pads.
-
-![USB-C](images/guide/usb-c.jpg)
-
-If you have a multimeter you can use it to check for bridges, check that the following pins connect to each other and all others do not:
- 
-* Top 1 & 8, bottom 1 & 8 are ground pins and should all connect to each other and the square ground pad of the USB-mini footprint.
-* Top 2 & 7, bottom 2 & 7 are V+ pins and should all connect to each other and the round bottom left pad of the USB-mini.
-* Top 4 & bottom 5 are D- pins and should connect to top left pad of the USB-mini.
-* Top 5 & bottom 4 are D+ pins and should connect to bottom center pad of the USB-mini.
-* Bottom 3 is the CC1 pin and should connect to the top pad of the R5 resistor.
-* Top 6 is the CC2 pin and should connect to the top pad of the R6 resistor.
 
 ### LEDs (LED1,2)
 
@@ -255,3 +231,6 @@ When fixing the PCB to your case you will only use the center, the left and the 
 ## End
 
 Congratulations, your build is complete.
+
+
+Estoy empezando a acostumbrarme a escribir 
